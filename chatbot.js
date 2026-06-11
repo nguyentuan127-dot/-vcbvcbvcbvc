@@ -65,7 +65,7 @@ function initChatbot() {
     const chatbotHTML = `
         <div id="chatbot-container" class="fixed bottom-6 right-6 z-50 flex flex-col items-end font-sans">
             <div id="chatbot-window" class="hidden flex-col w-[350px] sm:w-[420px] h-[550px] max-h-[80vh] rounded-3xl overflow-hidden chatbot-glass transition-all duration-300 mb-4 origin-bottom-right scale-95 opacity-0">
-                <div class="flex justify-between items-center px-5 py-4 border-b border-gray-200/50 bg-white/40">
+                <div class="flex justify-between items-center px-5 py-4 border-b border-gray-200/50 bg-white/40 shrink-0">
                     <div class="flex items-center gap-3">
                         <div class="relative flex items-center justify-center w-8 h-8 rounded-full bg-blue-100 text-blue-600">
                             <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
@@ -82,8 +82,8 @@ function initChatbot() {
                         </button>
                     </div>
                 </div>
-                <div id="chatbot-messages" class="flex-1 overflow-y-auto p-5 flex flex-col gap-4 scroll-smooth"></div>
-                <div class="p-4 bg-white/50 border-t border-gray-200/50">
+                <div id="chatbot-messages" class="flex-1 min-h-0 overflow-y-auto p-5 flex flex-col gap-4 scroll-smooth"></div>
+                <div class="p-4 bg-white/50 border-t border-gray-200/50 shrink-0">
                     <div class="relative flex items-center">
                         <input type="text" id="chatbot-input" placeholder="Hỏi Heirloom Bot..." class="w-full bg-white/70 border border-gray-300/50 rounded-full pl-5 pr-12 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500/50 transition-all shadow-sm">
                         <button id="chatbot-send" class="absolute right-1.5 p-2 bg-blue-600 hover:bg-blue-700 text-white rounded-full transition-colors flex items-center justify-center shadow-md disabled:opacity-50">
