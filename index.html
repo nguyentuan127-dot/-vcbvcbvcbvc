@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+
+<html lang="vi"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Heirloom Coffee - Tuyệt Tác Cà Phê</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&amp;family=Montserrat:ital,wght@0,100..900;1,100..900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "tertiary-fixed": "#a3f69c",
+                        "on-background": "#1e1b1a",
+                        "surface-container-high": "#eee6e5",
+                        "on-secondary-fixed-variant": "#4c4542",
+                        "on-secondary": "#ffffff",
+                        "surface-dim": "#e0d8d7",
+                        "secondary-fixed": "#ece0dc",
+                        "inverse-surface": "#33302f",
+                        "background": "#fff8f6",
+                        "surface-variant": "#e8e1df",
+                        "on-surface": "#1e1b1a",
+                        "primary-fixed": "#ffdad4",
+                        "secondary-fixed-dim": "#cfc4c0",
+                        "on-tertiary-container": "#56a554",
+                        "on-primary-fixed-variant": "#5b403c",
+                        "on-secondary-container": "#6b6360",
+                        "surface": "#fff8f6",
+                        "surface-container-highest": "#e8e1df",
+                        "on-surface-variant": "#504442",
+                        "error": "#ba1a1a",
+                        "on-secondary-fixed": "#201a18",
+                        "on-tertiary-fixed": "#002204",
+                        "on-primary": "#ffffff",
+                        "primary-fixed-dim": "#e3beb8",
+                        "tertiary-fixed-dim": "#88d982",
+                        "on-tertiary-fixed-variant": "#005312",
+                        "surface-container-low": "#faf2f0",
+                        "outline": "#827472",
+                        "on-error-container": "#93000a",
+                        "tertiary-container": "#003508",
+                        "surface-container": "#f4eceb",
+                        "on-primary-fixed": "#2b1613",
+                        "on-error": "#ffffff",
+                        "primary": "#271310",
+                        "surface-container-lowest": "#ffffff",
+                        "primary-container": "#3e2723",
+                        "inverse-primary": "#e3beb8",
+                        "error-container": "#ffdad6",
+                        "surface-tint": "#745853",
+                        "outline-variant": "#d3c3c0",
+                        "inverse-on-surface": "#f7efee",
+                        "secondary-container": "#ece0dc",
+                        "secondary": "#655d5a",
+                        "tertiary": "#001d03",
+                        "surface-bright": "#fff8f6",
+                        "on-primary-container": "#ae8d87",
+                        "on-tertiary": "#ffffff"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "unit": "8px",
+                        "container-max": "1280px",
+                        "margin-mobile": "20px",
+                        "margin-desktop": "64px",
+                        "gutter": "24px"
+                    },
+                    "fontFamily": {
+                        "label-sm": ["Montserrat"],
+                        "display-lg-mobile": ["Playfair Display"],
+                        "body-lg": ["Montserrat"],
+                        "headline-md": ["Playfair Display"],
+                        "display-lg": ["Playfair Display"],
+                        "body-md": ["Montserrat"],
+                        "headline-lg": ["Playfair Display"]
+                    },
+                    "fontSize": {
+                        "label-sm": ["12px", { "lineHeight": "1", "letterSpacing": "0.05em", "fontWeight": "600" }],
+                        "display-lg-mobile": ["36px", { "lineHeight": "1.2", "fontWeight": "700" }],
+                        "body-lg": ["18px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                        "headline-md": ["24px", { "lineHeight": "1.4", "fontWeight": "600" }],
+                        "display-lg": ["48px", { "lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "body-md": ["16px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                        "headline-lg": ["32px", { "lineHeight": "1.3", "fontWeight": "600" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .texture-overlay {
+            background-image: url('data:image/svg+xml;utf8,<svg width="100" height="100" xmlns="http://www.w3.org/2000/svg"><filter id="noise"><feTurbulence type="fractalNoise" baseFrequency="0.8" numOctaves="4" stitchTiles="stitch"/></filter><rect width="100" height="100" filter="url(%23noise)" opacity="0.05"/></svg>');
+            pointer-events: none;
+        }
+        
+        .soft-shadow {
+            box-shadow: 0 20px 40px rgba(62, 39, 35, 0.08);
+        }
+        
+        .image-mask {
+            mask-image: linear-gradient(to bottom, black 80%, transparent 100%);
+            -webkit-mask-image: linear-gradient(to bottom, black 80%, transparent 100%);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md relative overflow-x-hidden">
+<!-- Texture Overlay -->
+<div class="fixed inset-0 texture-overlay z-50"></div>
+<!-- TopNavBar -->
+<header class="w-full top-0 bg-background sticky z-40 transition-shadow duration-300 border-b border-surface-variant/50" id="main-nav">
+<div class="flex justify-between items-center w-full px-margin-desktop py-6 max-w-container-max mx-auto">
+<div class="font-headline-md text-headline-md text-primary tracking-tight">Heirloom Coffee</div>
+<nav class="hidden md:flex gap-8 items-center font-body-md text-body-md uppercase tracking-wider text-sm">
+<a class="text-primary border-b border-primary pb-1" href="#">Our Beans</a>
+<a class="text-on-secondary-container hover:text-primary transition-colors duration-300" href="#">Roasting Process</a>
+<a class="text-on-secondary-container hover:text-primary transition-colors duration-300" href="#">Subscriptions</a>
+<a class="text-on-secondary-container hover:text-primary transition-colors duration-300" href="#">Journal</a>
+<a class="text-on-secondary-container hover:text-primary transition-colors duration-300" href="#">Wholesale</a>
+</nav>
+<div class="flex items-center gap-6">
+<button class="font-body-md text-body-md uppercase tracking-wider text-primary hover:text-primary/80 transition-colors duration-300 text-sm">Sign In</button>
+<button class="text-primary hover:text-primary/80 transition-opacity duration-200 active:opacity-70">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">shopping_bag</span>
+</button>
+</div>
+</div>
+</header>
+<!-- Hero Section -->
+<section class="relative min-h-[90vh] flex items-center justify-center overflow-hidden py-24 bg-background">
+<div class="container mx-auto px-margin-desktop relative z-10 flex flex-col items-center text-center gap-16">
+<div class="max-w-3xl flex flex-col items-center gap-8 relative z-20">
+<span class="font-label-sm text-label-sm text-on-primary-container uppercase tracking-[0.3em] border-b border-primary pb-2">The Journal</span>
+<h1 class="font-display-lg text-display-lg text-primary tracking-tight uppercase leading-tight">Tuyệt Tác Cà Phê,<br/><span class="italic font-light lowercase text-on-surface-variant">khơi nguồn cảm hứng</span></h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-xl mx-auto leading-relaxed">
+                    Từng hạt cà phê là một tác phẩm nghệ thuật, được tuyển chọn khắt khe từ những nông trường danh tiếng. Trải nghiệm tầng hương phức hợp, độc bản chỉ có tại Heirloom, nơi định nghĩa lại sự tinh hoa trong nghệ thuật thưởng thức.
+                </p>
+<div class="flex gap-6 items-center justify-center mt-4">
+<button class="bg-primary text-on-primary font-label-sm text-label-sm px-10 py-4 hover:bg-primary-container transition-colors duration-300 uppercase tracking-[0.2em] border border-primary">
+                        Khám Phá Bộ Sưu Tập
+                    </button>
+</div>
+</div>
+<div class="relative w-full max-w-5xl aspect-[21/9] overflow-hidden rounded-sm p-4 border border-outline-variant/30 bg-surface-container-lowest soft-shadow -mt-12 z-10">
+<div class="w-full h-full overflow-hidden relative">
+<img alt="Elegant, top-down editorial shot of premium coffee packaging, a brass spoon, and loose roasted beans on a textured linen surface, warm golden tones, sophisticated composition." class="w-full h-full object-cover" data-alt="Elegant, top-down editorial shot of premium coffee packaging, a brass spoon, and loose roasted beans on a textured linen surface, warm golden tones, sophisticated composition." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBoWd0JDbXPHkUAvELX5VlMm0xjIx6_HyuYPvogZdJfBhSm1RRkjqmz837zGNH1KAYxYUdmPpUDr6Gf17h4r258iLcPyQM0ZPQ1JU_ZmfxzZeAeyrWWfYZ5ioAIbHEwKhjIKgWEtPLzGpR01XP2LMQ1d-bxBlrrEBgQ1pyxB6s2rawsOaep-AcnK2LBmg7-DoK9MORynvzaueEO2B-kmoHwdO7oFtpWn2Z4WZYdqF3Y7pTDWjVxjGiWvw_FW0WrHUeAoua3vD7N8sla"/>
+</div>
+</div>
+</div>
+</section>
+<!-- Problem Section -->
+<section class="py-32 bg-surface-container-low border-y border-outline-variant/20">
+<div class="container mx-auto px-margin-desktop max-w-container-max">
+<div class="grid grid-cols-12 gap-gutter items-center">
+<div class="col-span-12 md:col-span-6 order-2 md:order-1 relative">
+<div class="absolute inset-0 border border-primary/20 translate-x-4 translate-y-4"></div>
+<div class="relative w-full aspect-[3/4] overflow-hidden bg-surface-container-lowest z-10">
+<img alt="A close up editorial photograph of hands holding a rustic ceramic mug of coffee, looking tired. The color palette is muted with deep espresso browns and soft cream backgrounds, conveying a sense of fatigue before the morning coffee ritual, shot with soft natural lighting and shallow depth of field." class="w-full h-full object-cover grayscale opacity-90" data-alt="A close up editorial photograph of hands holding a rustic ceramic mug of coffee, looking tired. The color palette is muted with deep espresso browns and soft cream backgrounds, conveying a sense of fatigue before the morning coffee ritual, shot with soft natural lighting and shallow depth of field." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA8XYwWNlxADY1wICVxHySyHH2GTYciZBPTqNWRTUos8pjvkTnbqsJc8KFsgGhfBUVBHehTno0VWl12ygka6DtlWQ-Wir2r7rS2WxME31KyL1SsN6vYMp_A37VZlPlnXyYOQHPXWDWAhcuZZJIJw0o-KMIpUw3y3l1SpwRUcaSDudedQFsYPJTuE-RESLRcopcnYGwOEbFHuPLrPR2eTDQMaOC8bwXMdYj-2FNOJzxezKuGihxkpngQoTbCISo3_SIsmbv56xBA19q_"/>
+</div>
+</div>
+<div class="col-span-12 md:col-span-5 md:col-start-8 order-1 md:order-2 flex flex-col gap-8 mb-12 md:mb-0 text-center md:text-left">
+<span class="font-label-sm text-label-sm text-on-primary-container uppercase tracking-[0.2em]">Giới Hạn Của Cà Phê Đại Trà</span>
+<h2 class="font-headline-lg text-headline-lg text-primary italic font-light">Sự Thỏa Hiệp Về Hương Vị Đã Đến Lúc Dừng Lại</h2>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+                        Những quy trình công nghiệp sản xuất hàng loạt đang tước đi linh hồn thực sự của hạt cà phê. Sự tẩm ướp và rang ép nhiệt độ cao che lấp đi những nốt hương tinh tế, để lại sự chát đắng tẻ nhạt và một trải nghiệm không trọn vẹn.
+                    </p>
+<div class="w-16 h-px bg-primary/30 mx-auto md:mx-0 my-4"></div>
+</div>
+</div>
+</div>
+</section>
+<!-- Solution Section -->
+<section class="py-32 bg-background relative">
+<div class="container mx-auto px-margin-desktop max-w-container-max">
+<div class="grid grid-cols-12 gap-gutter items-center">
+<div class="col-span-12 md:col-span-5 flex flex-col gap-8 mb-12 md:mb-0 text-center md:text-left">
+<span class="font-label-sm text-label-sm text-on-primary-container uppercase tracking-[0.2em]">Nghệ Thuật Rang Xay Độc Bản</span>
+<h2 class="font-headline-lg text-headline-lg text-primary italic font-light">Hành Trình Đánh Thức Tầng Hương Ẩn Giấu</h2>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+                        Heirloom tôn vinh những giá trị nguyên bản nhất. Từng mẻ rang được tinh chỉnh thủ công bởi những nghệ nhân dày dạn kinh nghiệm, giải phóng những nốt hương hoa quả thanh tao, vị sô-cô-la trầm ấm và hậu vị ngọt ngào lưu luyến.
+                    </p>
+<div class="w-16 h-px bg-primary/30 mx-auto md:mx-0 my-4"></div>
+</div>
+<div class="col-span-12 md:col-span-6 md:col-start-7 relative">
+<div class="absolute inset-0 border border-primary/20 -translate-x-4 -translate-y-4"></div>
+<div class="relative w-full aspect-[3/4] overflow-hidden bg-surface-container-lowest z-10">
+<img alt="A high-end editorial shot of fresh coffee beans cascading into a modern manual grinder. The setting is bright and organic, featuring warm wood tones and creamy whites, highlighting the purity and artisanal nature of the roasting process with a focus on tactile textures." class="w-full h-full object-cover" data-alt="A high-end editorial shot of fresh coffee beans cascading into a modern manual grinder. The setting is bright and organic, featuring warm wood tones and creamy whites, highlighting the purity and artisanal nature of the roasting process with a focus on tactile textures." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC1otVAZczl37G3WLjnVi4eUw-JeEcegkxFA8b4gwCyr_tyAsgQ9DRUq_DKnLeXz7AydW6Ts8YyMB4CxG3GK-omb4aZFl-vpssdcbcsQkqWueDNFlxhSu8I9V6YPzwo7ZcCXG3o6eaweL2u4ABHf8NmzQbKW_mv9OTRal5a0RmM_GhYazUKuET1SbNc4MigxhJhWeQvKgV_w7GIsLyhD4uz_Mpv6Xj0r78wJqNUQG268ZYFVZbaa8S6dyKnIKrmuRVSXvlp4KD1vacm"/>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Products / Offers Section -->
+<section class="py-32 bg-surface-container-lowest border-t border-outline-variant/20">
+<div class="container mx-auto px-margin-desktop max-w-container-max">
+<div class="text-center mb-24 flex flex-col items-center gap-6">
+<span class="font-label-sm text-label-sm text-on-primary-container uppercase tracking-[0.3em] border-b border-primary pb-2">Bộ Sưu Tập Giới Hạn</span>
+<h2 class="font-headline-lg text-headline-lg text-primary text-4xl">Những Tác Phẩm Nghệ Thuật<br/><span class="italic font-light text-on-surface-variant">Từ Hạt Cà Phê</span></h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+<!-- Product Card 1 -->
+<div class="bg-background rounded-none overflow-hidden group flex flex-col border border-outline-variant/30 hover:border-primary/50 transition-colors duration-500">
+<div class="aspect-[4/5] overflow-hidden relative p-4 pb-0">
+<img alt="A sleek, minimalist bag of artisanal roasted coffee sitting on a subtle cream textured background with a few scattered coffee beans. The lighting is soft and directional, emphasizing the premium quality and organic-modern design aesthetic of the packaging." class="w-full h-full object-cover grayscale-[20%] group-hover:scale-105 transition-transform duration-700" data-alt="A sleek, minimalist bag of artisanal roasted coffee sitting on a subtle cream textured background with a few scattered coffee beans. The lighting is soft and directional, emphasizing the premium quality and organic-modern design aesthetic of the packaging." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCTNaRCdWMddSlOaovf-Xd0NJydelDqfLb8BpR86yGSWDLmW8bsxBP79AjLsqvIeB_YQZZY6IDpTwq1wh5Vv-wh9MiIGAj8APH_N9IJq-3xn0o74Bs27zVoXjcw-Ofb0DH0aIxgSc7XdRD5r_0BYiozSNfPaSRkWwiGWS_MPxHDVpzfGWiHmBl8ApsJf4-2y2c4qf1ayFJyttuovEL0rMf3YafME5n-2nZzeoK9rtr2Itu9_KL-KHrMicgORUddUd73LGRzZRBuyh0-"/>
+</div>
+<div class="p-8 flex flex-col gap-6 items-center text-center flex-1 bg-background z-10">
+<div class="flex gap-3">
+<span class="text-on-surface-variant font-label-sm text-[10px] uppercase tracking-widest border border-outline-variant px-3 py-1">Espresso</span>
+<span class="text-on-surface-variant font-label-sm text-[10px] uppercase tracking-widest border border-outline-variant px-3 py-1">Đậm Đà</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-primary italic">Heritage Blend</h3>
+<p class="font-body-md text-body-md text-on-surface-variant text-sm">Sự kết hợp hoàn hảo giữa Robusta đậm đà và Arabica thơm nồng, dánh thức mọi giác quan.</p>
+<div class="mt-auto w-full flex flex-col items-center gap-4 pt-6 border-t border-surface-variant">
+<span class="font-body-lg text-body-lg text-primary tracking-widest">250.000đ</span>
+<button class="text-on-surface-variant hover:text-primary font-label-sm text-label-sm uppercase tracking-[0.2em] transition-colors border-b border-transparent hover:border-primary pb-1">
+                                Thêm vào giỏ
+                            </button>
+</div>
+</div>
+</div>
+<!-- Product Card 2 -->
+<div class="bg-background rounded-none overflow-hidden group flex flex-col border border-outline-variant/30 hover:border-primary/50 transition-colors duration-500 relative">
+<div class="absolute top-6 right-6 z-20 bg-primary text-on-primary font-label-sm text-[10px] px-4 py-1 uppercase tracking-widest">
+                        Exclusivity
+                    </div>
+<div class="aspect-[4/5] overflow-hidden relative p-4 pb-0">
+<img alt="An elegant glass pour-over coffee maker filled with amber-colored brewing coffee. The setting features light oak wood and cream ceramics, capturing a slow, deliberate brewing process in an editorial, high-end lifestyle style." class="w-full h-full object-cover grayscale-[20%] group-hover:scale-105 transition-transform duration-700" data-alt="An elegant glass pour-over coffee maker filled with amber-colored brewing coffee. The setting features light oak wood and cream ceramics, capturing a slow, deliberate brewing process in an editorial, high-end lifestyle style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuByr6MnKBQCqMxJMZWtLW4tWKhtJc20g0ikaQqADd10QopCxujurqhzEjvQ9CLpoygPNGpVYaqDXdEtKylM6Hl1tw5DRXibkcaE4lhsFgkD45aIeTVNaz6mely7nFQHGuN__jVmBruprotQpBdon3jACLBcA6pKJEmCIjT_btjKHsIPp1uRvIRrtYFYByG6iP-PJPgRwwAGuJxO4BIf6LBFLr7rP1_EFU0JvZgKd3x3YEPBbLUQScqDijU51W7XNUZAuW05Qm5y8Sut"/>
+</div>
+<div class="p-8 flex flex-col gap-6 items-center text-center flex-1 bg-background z-10">
+<div class="flex gap-3">
+<span class="text-on-surface-variant font-label-sm text-[10px] uppercase tracking-widest border border-outline-variant px-3 py-1">Pour Over</span>
+<span class="text-on-surface-variant font-label-sm text-[10px] uppercase tracking-widest border border-outline-variant px-3 py-1">Hương Hoa</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-primary italic">Single Origin Arabica</h3>
+<p class="font-body-md text-body-md text-on-surface-variant text-sm">Hương vị chua thanh đặc trưng, phảng phất hương hoa và hậu vị ngọt lịm từ vùng trồng cao.</p>
+<div class="mt-auto w-full flex flex-col items-center gap-4 pt-6 border-t border-surface-variant">
+<span class="font-body-lg text-body-lg text-primary tracking-widest">320.000đ</span>
+<button class="text-on-surface-variant hover:text-primary font-label-sm text-label-sm uppercase tracking-[0.2em] transition-colors border-b border-transparent hover:border-primary pb-1">
+                                Thêm vào giỏ
+                            </button>
+</div>
+</div>
+</div>
+<!-- Product Card 3 -->
+<div class="bg-background rounded-none overflow-hidden group flex flex-col border border-outline-variant/30 hover:border-primary/50 transition-colors duration-500">
+<div class="aspect-[4/5] overflow-hidden relative p-4 pb-0">
+<img alt="A beautifully composed subscription box of artisanal coffee lying open on a textured linen cloth. The lighting is soft and inviting, emphasizing a luxurious unboxing experience with deep espresso and creamy latte color tones." class="w-full h-full object-cover grayscale-[20%] group-hover:scale-105 transition-transform duration-700" data-alt="A beautifully composed subscription box of artisanal coffee lying open on a textured linen cloth. The lighting is soft and inviting, emphasizing a luxurious unboxing experience with deep espresso and creamy latte color tones." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAtlaQ16WWcWdt4X6ni6jqARsUz3mWXiWPLydp9qFTP3x7YqCBC4Nu1Lffs1xsXOM_Tevm-q7BpynMPJqGnW9VEy120jbe1YG-S_UHLHZH4ueij78vH-FJDg5qu10VQkqNC9Sv8KTpihwRY-ZGic1AEKIcyUkuDANvBWQHzp-zER3JXwATQSsjpqCukmvx3wtsOn14W-oan9PLAx00s2bzh8FmxDUiaXZRx2Xh7xdC9IA4R8pCQsvmuwmg7lU2gF_soeqGy41Qd1CyR"/>
+</div>
+<div class="p-8 flex flex-col gap-6 items-center text-center flex-1 bg-background z-10">
+<div class="flex gap-3">
+<span class="text-on-surface-variant font-label-sm text-[10px] uppercase tracking-widest border border-outline-variant px-3 py-1">Đăng Ký</span>
+<span class="text-on-surface-variant font-label-sm text-[10px] uppercase tracking-widest border border-outline-variant px-3 py-1">Định Kỳ</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-primary italic">Gói Trải Nghiệm Thượng Lưu</h3>
+<p class="font-body-md text-body-md text-on-surface-variant text-sm">Tuyển tập những hương vị tinh túy nhất, được giám tuyển và giao đến bạn mỗi tháng.</p>
+<div class="mt-auto w-full flex flex-col items-center gap-4 pt-6 border-t border-surface-variant">
+<span class="font-body-lg text-body-lg text-primary tracking-widest">Từ 450.000đ/tháng</span>
+<button class="text-on-surface-variant hover:text-primary font-label-sm text-label-sm uppercase tracking-[0.2em] transition-colors border-b border-transparent hover:border-primary pb-1">
+                                Tham Gia Ngay
+                            </button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Testimonial Section -->
+<section class="py-32 bg-surface-container-low border-t border-outline-variant/20">
+<div class="container mx-auto px-margin-desktop max-w-container-max text-center relative">
+<div class="absolute top-0 left-1/2 -translate-x-1/2 w-px h-16 bg-primary/30"></div>
+<span class="font-label-sm text-label-sm text-on-primary-container uppercase tracking-[0.3em] mb-12 block mt-8">Từ Những Người Mộ Điệu</span>
+<div class="max-w-4xl mx-auto flex flex-col items-center gap-12">
+<span class="font-display-lg text-8xl text-primary/10 leading-none h-12 block font-serif">"</span>
+<p class="font-headline-lg text-headline-lg text-primary italic leading-relaxed font-light text-3xl">
+                    Sự tinh tế trong từng nốt hương của Heirloom đã định hình lại hoàn toàn tiêu chuẩn thưởng thức cà phê của tôi. Một trải nghiệm nguyên bản, thuần khiết và đầy cảm hứng nghệ thuật.
+                </p>
+<div class="flex flex-col items-center gap-4 mt-8">
+<div class="w-16 h-16 rounded-full overflow-hidden bg-surface-variant border border-outline-variant/50 p-1">
+<img alt="A relaxed, candid portrait of a young man enjoying a cup of coffee in a bright, modern cafe setting. The lighting is soft and natural, fitting the premium editorial style of the brand with subtle warm tones." class="w-full h-full object-cover rounded-full grayscale" data-alt="A relaxed, candid portrait of a young man enjoying a cup of coffee in a bright, modern cafe setting. The lighting is soft and natural, fitting the premium editorial style of the brand with subtle warm tones." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDK-NtSMfAj-jHPdxuQy0Z77zno1Ji1sUR2L5NEuHywQQPCEeHUCxwNY5xfNSlQxT3d51QwZNqJLaBIQ2TXZfmrJPp0_f-fhTutD3KqgNqgfFHYbV0ZgG78t2GUhbYqoh8X69SZt_6BwTgwv3Zz0mSWNNDbw6mis_lvfncaMp11309gLXknpjPLO0ES0ZZON0264zVwrSa3Bw6Vc4_pAjh9hdMAFKg8UXcCc-Rf8mm5GJgL3uf1OvL6IrEsmT9qy37wZWAetv5fQrpU"/>
+</div>
+<div class="text-center">
+<h4 class="font-body-lg text-body-lg text-primary uppercase tracking-widest text-sm mb-1">Minh Tuấn</h4>
+<span class="font-label-sm text-label-sm text-on-surface-variant italic font-light lowercase">Creative Director</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="w-full bg-primary text-on-primary border-t border-primary-container">
+<div class="flex flex-col md:flex-row justify-between items-center w-full px-margin-desktop py-16 max-w-container-max mx-auto gap-12 md:gap-0 border-b border-on-primary/10 mb-8">
+<div class="font-headline-md text-headline-md text-on-primary tracking-widest uppercase text-3xl">Heirloom</div>
+<nav class="flex flex-wrap justify-center gap-10 font-label-sm text-label-sm">
+<a class="text-on-primary/80 hover:text-on-primary transition-colors duration-300 uppercase tracking-[0.2em]" href="#">Journal</a>
+<a class="text-on-primary/80 hover:text-on-primary transition-colors duration-300 uppercase tracking-[0.2em]" href="#">Collections</a>
+<a class="text-on-primary/80 hover:text-on-primary transition-colors duration-300 uppercase tracking-[0.2em]" href="#">Heritage</a>
+<a class="text-on-primary/80 hover:text-on-primary transition-colors duration-300 uppercase tracking-[0.2em]" href="#">Contact</a>
+</nav>
+</div>
+<div class="flex flex-col items-center pb-8 px-margin-desktop gap-4">
+<div class="font-label-sm text-[10px] text-on-primary/50 uppercase tracking-widest text-center">
+                © 2024 Heirloom Coffee Roasters. Curated Exclusivity.
+            </div>
+</div>
+</footer>
+<script>
+        // Simple scroll effect for navbar
+        const nav = document.getElementById('main-nav');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                nav.classList.add('shadow-sm');
+                nav.classList.add('bg-surface-container-lowest/95');
+                nav.classList.add('backdrop-blur-md');
+                nav.classList.remove('bg-background');
+            } else {
+                nav.classList.remove('shadow-sm');
+                nav.classList.remove('bg-surface-container-lowest/95');
+                nav.classList.remove('backdrop-blur-md');
+                nav.classList.add('bg-background');
+            }
+        });
+    </script>
+<link rel="stylesheet" href="chatbot.css">
+<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+<script src="chatbot.js"></script>
+</body></html>
